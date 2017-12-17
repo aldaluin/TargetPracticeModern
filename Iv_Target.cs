@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using Goldraven.Prod;
 using Goldraven.Weapons;
@@ -12,6 +12,7 @@ namespace Goldraven.IvWeapons
 	public class Iv_Target : MonoBehaviour, vIDamageReceiver
 	{
 
+		// All that's needed to implement vIDamageReceiver
 		public void TakeDamage (vDamage damage, bool hitReaction = true)
 		{
 			// Debug.Log ("Iv target taking damage");
@@ -19,6 +20,7 @@ namespace Goldraven.IvWeapons
 			ReactToHit (damage.damageValue);
 		}
 
+		// Vars and properties
 		public static Scoreboard scores;
 		public Iv_Target baseTarget;
 		public bool terminatorTarget = false;
@@ -34,6 +36,7 @@ namespace Goldraven.IvWeapons
 		//[SerializeField] private GameObject deathEffect = null;
 		//[SerializeField] private Vector3 deathEffectOffset = new Vector3(0f, 0f, 0f);
 
+		// Methods
 		void Start ()
 		{
 			scores = GameObject.FindWithTag ("Scoreboard").GetComponent<Scoreboard> ();
