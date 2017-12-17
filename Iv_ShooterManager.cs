@@ -1,8 +1,16 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 namespace Goldraven.IvWeapons
 {
+
+	/* cmcb  2017/12/17
+	 * 
+	 * Subclass Invector shooter manager to add an OnShoot event.
+	 * 
+	 * 
+	 */
+
 
 	public class Iv_ShooterManager : vShooterManager{
 
